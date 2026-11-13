@@ -1,13 +1,26 @@
 # The Golden Dragon
 
-A storybook port of the Python text adventure. Plain HTML, CSS and JavaScript. No build step, no backend. Includes a visible English/Arabic language switch.
+A lightweight, bilingual (English/Arabic) fantasy adventure game.
 
-## Deploy on GitHub Pages
-1. Upload everything in this folder to a repository (keep `index.html` at the root).
-2. Settings, then Pages, then *Deploy from a branch*, branch `main`, folder `/ (root)`.
-3. Open `https://<user>.github.io/<repo>/`. All paths are relative, so repository subpaths work.
+## Run locally
+Open `index.html` in a modern browser. No Python, Node.js, backend, build step, or installation is required.
 
-## Structure
-- `js/game.js` rules and story (no DOM), `js/ui.js` book pages and language switching, `js/ar.js` Arabic translations, `css/style.css` theme.
-- `assets/images/<scene>.webp` scene art (forest, wolf, river, echo, cave, corridor, tunnel, gate, hall, over, win). Replace a file with the same name to change a scene.
-- `assets/fonts/` put `UncialAntiqua-Regular.ttf`, `IMFellEnglish-Regular.ttf`, `IMFellEnglish-Italic.ttf` here (both are free OFL fonts). Without them the site uses a Georgia-style fallback.
+## Publish with GitHub Pages
+1. Extract this ZIP file.
+2. Open the extracted folder.
+3. Upload **all files directly into the root of your GitHub repository**.
+4. In GitHub, open **Settings → Pages**.
+5. Select **Deploy from a branch**, choose your main branch and `/ (root)`, then save.
+6. Wait for GitHub Pages to publish the site.
+
+All files are intentionally kept in one folder (the repository root). Do not move the JavaScript, CSS, or image files into separate folders unless you also update their paths.
+
+## Files
+- `index.html` — page structure
+- `style.css` — visual design and responsive layout
+- `game.js` — game rules and story
+- `ui.js` — interface, rendering, and language switching
+- `ar.js` — Arabic translations
+- `*.webp` — scene illustrations
+
+The language switch is available on the landing page and during gameplay. The selected language is saved in the browser.
