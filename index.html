@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Golden Dragon — a fantasy adventure</title>
+<meta name="description" content="A storybook adventure in the Cursed Forest. Choose wisely.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Ctext y='16' font-size='16'%3E%F0%9F%90%89%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main id="land" class="land">
+  <button class="lang-toggle land-lang" type="button" aria-label="Switch language">العربية</button>
+  <div id="land-art" aria-hidden="true"></div>
+  <form id="f" class="cover">
+    <h1 data-t>The Golden Dragon</h1>
+    <p data-t>Beyond the Cursed Forest, a dragon guards a treasure of legend.</p>
+    <label for="n" data-t>Oh! Hello brave adventurer, please enter your name:</label>
+    <input id="n" maxlength="24" autocomplete="off" placeholder="Adventurer">
+    <button data-t>Enter the Cursed Forest</button>
+    <small id="bestland"></small>
+  </form>
+</main>
+<div id="game" hidden>
+  <header class="hud">\n    <button class="lang-toggle game-lang" type="button" aria-label="Switch language">العربية</button>
+    <div class="meter"><span data-t>Health</span><div class="bar"><i id="hp"></i></div><b id="hpn"></b></div>
+    <div><span data-t>Score</span><b id="sc">0</b></div>
+    <div><span data-t>Spell</span><b id="sp"></b></div>
+    <div><span data-t>Best</span><b id="best">0</b></div>
+  </header>
+  <div id="book" class="book">
+    <div class="left">
+      <div id="art" class="art"></div>
+      <section class="sat"><h2 data-t>Satchel</h2><ul id="inv"></ul></section>
+    </div>
+    <article id="leaf" class="right" aria-live="polite"></article>
+  </div>
+</div>
+<script src="js/ar.js"></script>
+<script src="js/game.js"></script>
+<script src="js/ui.js"></script>
+</body>
+</html>
